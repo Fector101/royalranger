@@ -5,11 +5,13 @@ if (menuToggle && navLinks) {
   menuToggle.addEventListener('click', () => {
     const isActive = navLinks.classList.toggle('active');
     menuToggle.setAttribute('aria-expanded', isActive ? 'true' : 'false');
+    menuToggle.textContent = isActive ? '✕' : '☰';
   });
 }
 
+const hasHover = window.matchMedia('(hover: hover)').matches;
 const navDropdowns = document.querySelectorAll('.nav-dropdown');
-if (navDropdowns.length) {
+if (navDropdowns.length && hasHover) {
   navDropdowns.forEach((dropdown) => {
     dropdown.addEventListener('mouseenter', () => {
       dropdown.setAttribute('open', '');
