@@ -766,3 +766,23 @@ iframe {
     background: var(--accent);
     border-color: var(--accent);
 }
+
+.age-group-card{
+      display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+    padding-left: 0;
+    padding-top: 0;
+  }
+
+.age-group-card img {
+    width: 12rem;
+}
+
+
+.age-group-card.card .badge {
+    align-self: baseline;
+    border-radius: 16px 0;
+    font-size: 15px;
+}
