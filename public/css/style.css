@@ -335,9 +335,9 @@ button:active, .button:active {
 }
 
 .section-grid-2 {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1.5rem;
+     display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .section-grid-3 {
@@ -734,4 +734,101 @@ iframe {
   .content-page .content {
     padding: 2rem 0;
   }
+}
+
+.section-grid-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.section-grid-4 > * {
+  flex: 1 1 calc(25% - 1.125rem);
+  min-width: 200px;
+}
+
+.gaped-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.age-group-card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.age-group-card-section > * {
+  flex: 1 1 calc(25% - 1.125rem);
+  min-width: 220px;
+}
+.underline{
+  text-decoration: underline;
+}
+
+.motto-box{
+  margin: 1rem;
+  margin-top: 1.8rem;
+}
+
+.motto-box h4{
+    font-size: 1.2rem;
+    margin-bottom: 0;
+
+}
+.motto-box p{
+  /* padding-left: 5px; */
+}
+
+.register.btn{
+      padding: 0.75rem 2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #fff;
+    background: var(--accent);
+    border-color: var(--accent);
+}
+.age-group-card-section{
+  flex-direction: row;
+}
+.age-group-card{
+      display: flex;
+    flex-direction: column;
+        /* flex-wrap: wrap; */
+    gap: 0.5rem;
+    align-items: center;
+    padding: 0;
+    /* width: max-content;
+    min-width: 215px; */
+    /* max-width: 215px; */
+  }
+.age-group-card .content{
+  display: flex;
+  flex-direction: column;
+  padding: 1.75rem;
+    gap: 1rem;
+    padding-top: 0;
+justify-content: center;    
+    align-items: center;  
+}
+
+.age-group-card p, .age-group-card h3{
+    /* padding-left: 1.7rem; */
+    margin: 0;
+
+}
+.age-group-card img {
+    margin: 0;
+    width: 12rem;
+    /* padding-left: 1.75rem; */
+}
+
+
+.age-group-card.card .badge {
+    align-self: baseline;
+    border-radius: 16px 0;
+    font-size: 15px;
 }
