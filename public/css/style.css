@@ -736,8 +736,33 @@ iframe {
   }
 }
 
-.gaped-list{
-  display: flex; flex-direction: column; gap: 1rem;
+.section-grid-4 {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.section-grid-4 > * {
+  flex: 1 1 calc(25% - 1.125rem);
+  min-width: 200px;
+}
+
+.gaped-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.age-group-card-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.age-group-card-section > * {
+  flex: 1 1 calc(25% - 1.125rem);
+  min-width: 220px;
 }
 .underline{
   text-decoration: underline;
@@ -776,9 +801,9 @@ iframe {
     gap: 0.5rem;
     align-items: center;
     padding: 0;
-    width: max-content;
-    min-width: 215px;
-    max-width: 215px;
+    /* width: max-content;
+    min-width: 215px; */
+    /* max-width: 215px; */
   }
 .age-group-card .content{
   display: flex;
@@ -787,7 +812,7 @@ iframe {
     gap: 1rem;
     padding-top: 0;
 justify-content: center;    
-  
+    align-items: center;  
 }
 
 .age-group-card p, .age-group-card h3{
