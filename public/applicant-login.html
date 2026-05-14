@@ -7,58 +7,37 @@
   <title>Applicant Login | Royal Rangers Nigeria Southwest Zone 2</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
-<body>
-  <header class="site-header">
-    <div class="container navbar">
-      <a class="brand" href="/">
-        <img src="/images/logo.png" alt="Royal Rangers Nigeria Southwest Zone 2">
-      </a>
-      <button class="nav-toggle" aria-expanded="false">☰</button>
-      <nav class="nav-links">
-        <a href="/">Home</a>
-        <a href="/about.html">About</a>
-        <a href="/leadership.html">Leaders</a>
-        <a href="/programs.html">Programs</a>
-        <a href="/media.html">Media</a>
-        <a href="/announcements.html">News</a>
-        <a href="/register.html">Register</a>
-      </nav>
-    </div>
-  </header>
-
-  <main class="container">
-    <section class="section">
-      <div class="section-title">
+<body class="login-page">
+  <main class="login-container">
+    <div class="login-card">
+      <div class="login-header">
+        <img src="/images/logo.png" alt="Royal Rangers Nigeria Southwest Zone 2" class="login-logo">
         <span class="badge">Applicant Login</span>
-        <h2>Log in with your registered email</h2>
-        <p>Use the email and password you provided during registration to view your application details and status.</p>
+        <h2>Welcome Back</h2>
+        <p>Sign in to view your registration status and details.</p>
       </div>
-      <div class="contact-card">
-        <form id="applicant-login-form">
-          <div class="form-grid">
-            <div class="field">
-              <label for="applicant-email">Email Address</label>
-              <input id="applicant-email" name="email" type="email" required>
-            </div>
-            <div class="field">
-              <label for="applicant-password">Password</label>
-              <input id="applicant-password" name="password" type="password" required>
-            </div>
+      <form id="applicant-login-form" class="login-form">
+        <div class="field">
+          <label for="applicant-email">Email Address</label>
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M22 7l-10 7L2 7"/></svg>
+            <input id="applicant-email" name="email" type="email" placeholder="you@example.com" required>
           </div>
-          <button type="submit" class="button form-button">Login</button>
-          <p style="margin-top:1rem; text-align:center;"><a href="/forgot-password">Forgot Password?</a></p>
-          <p id="login-message" style="margin-top:1rem;color:var(--accent);"></p>
-        </form>
-      </div>
-    </section>
-  </main>
-
-  <footer class="footer">
-    <div class="footer-row">
-      <div><p>Applicant login provides secure access to your registration status and details.</p></div>
+        </div>
+        <div class="field">
+          <label for="applicant-password">Password</label>
+          <div class="input-wrap">
+            <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0110 0v4"/></svg>
+            <input id="applicant-password" name="password" type="password" placeholder="Enter your password" required>
+          </div>
+        </div>
+        <button type="submit" class="button login-btn">Login</button>
+        <a href="/forgot-password" class="login-forgot">Forgot Password?</a>
+        <p id="login-message" class="login-message"></p>
+      </form>
+      <p class="login-footer-text">Not registered? <a href="/register.html">Create an account</a></p>
     </div>
-  </footer>
-  <script src="/js/main.js"></script>
+  </main>
   <script src="/js/applicant-login.js"></script>
 </body>
 </html>
