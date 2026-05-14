@@ -304,7 +304,7 @@ button:active, .button:active {
 
 /* Sections */
 .section {
-  padding: 4rem 0;
+  padding: 2rem 0;
 }
 
 .section.alt {
@@ -379,6 +379,11 @@ button:active, .button:active {
   padding: 1.75rem;
   box-shadow: var(--shadow);
   transition: box-shadow var(--transition), transform var(--transition);
+}
+
+.contact-card:has(form) {
+  max-width: 680px;
+  margin-inline: auto;
 }
 
 .card:hover,
@@ -601,7 +606,8 @@ iframe {
   }
 
   .nav-links.active {
-    max-height: 500px;
+    /* max-height: 500px; */
+    max-height: max-content;
     opacity: 1;
     transform: translateY(0);
     padding: 0.5rem 1rem 1rem;
@@ -831,4 +837,8 @@ justify-content: center;
     align-self: baseline;
     border-radius: 16px 0;
     font-size: 15px;
+}
+
+.form-button{
+  margin-top: 1.25rem;
 }
