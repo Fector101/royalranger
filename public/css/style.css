@@ -381,6 +381,11 @@ button:active, .button:active {
   transition: box-shadow var(--transition), transform var(--transition);
 }
 
+.contact-card:has(form) {
+  max-width: 680px;
+  margin-inline: auto;
+}
+
 .card:hover,
 .info-card:hover,
 .unit-card:hover,
@@ -832,4 +837,8 @@ justify-content: center;
     align-self: baseline;
     border-radius: 16px 0;
     font-size: 15px;
+}
+
+.form-button{
+  margin-top: 1.25rem;
 }
