@@ -25,10 +25,15 @@ async function initializeDatabase() {
       const members = db.collection('members');
       const admins = db.collection('admins');
       const feedback = db.collection('feedback');
+      const passwordResets = db.collection('password_resets');
 
       // Create indexes for email uniqueness
       await members.createIndex({ email: 1 }, { unique: true });
       await admins.createIndex({ email: 1 }, { unique: true });
+
+      // Password reset token index for TTL auto-expiry (1 hour)
+      await passwordResets.createIndex({ expiresAt: 1 }, { expireAfterSeconds: 0 });
+      await passwordResets.createIndex({ token: 1 });
 
       // Create default admin if none exists
       const adminCount = await admins.countDocuments();
