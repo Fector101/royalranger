@@ -54,6 +54,7 @@ app.use('/admin', require('./routes/admin'));
 app.use('/api/members', require('./routes/members'));
 app.use('/api/register', require('./routes/register'));
 app.use('/api/applicant', require('./routes/applicant'));
+app.use('/', require('./routes/passwordReset'));
 app.use('/api/feedback', require('./routes/feedback'));
 
 app.use((err, req, res, next) => {
